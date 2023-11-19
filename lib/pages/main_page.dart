@@ -1,4 +1,5 @@
 import 'package:course_app_flutter/pages/home_page.dart';
+import 'package:course_app_flutter/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -64,8 +65,6 @@ class _MainPageState extends State<MainPage> {
     const Center(
       child: Text('Messages'),
     ),
-    const Center(
-      child: Text('User'),
-    ),
+    const ProfilePage()
   ];
 }

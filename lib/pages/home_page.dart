@@ -1,6 +1,8 @@
 import 'package:course_app_flutter/components/post_item.dart';
+import 'package:course_app_flutter/components/toolbar.dart';
 import 'package:course_app_flutter/styles/app_color.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -11,13 +13,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     mockUsersFromServer();
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: AppColors.background,
-        elevation: 0,
-        title: const Text('Title App'),
-        centerTitle: true,
-        actions: const [
-          Icon(Icons.location_on_outlined),
+      appBar: Toolbar(
+        title: 'Title App',
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: SvgPicture.asset('assets/svg/ic_location.svg'),
+          ),
         ],
       ),
       body: ListView.separated(
