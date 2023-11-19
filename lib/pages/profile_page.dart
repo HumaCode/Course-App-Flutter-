@@ -19,7 +19,7 @@ class ProfilePage extends StatelessWidget {
           PopupMenuButton<ProfileMenu>(onSelected: (value) {
             switch (value) {
               case ProfileMenu.edit:
-                print('edit');
+                Navigator.of(context).pushNamed('/edit_profile');
                 break;
               case ProfileMenu.logout:
                 print('logout');
