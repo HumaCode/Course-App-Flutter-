@@ -1,4 +1,6 @@
-import 'package:course_app_flutter/login_page.dart';
+import 'package:course_app_flutter/pages/home_page.dart';
+import 'package:course_app_flutter/pages/login_page.dart';
+import 'package:course_app_flutter/pages/main_page.dart';
 import 'package:course_app_flutter/styles/app_color.dart';
 import 'package:flutter/material.dart';
 
@@ -16,8 +18,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Urbanist',
         scaffoldBackgroundColor: AppColors.background,
+        brightness: Brightness.dark,
       ),
-      home: const LoginPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const LoginPage(),
+        '/home': (context) => HomePage(),
+        '/main': (context) => const MainPage(),
+      },
     );
   }
 }
