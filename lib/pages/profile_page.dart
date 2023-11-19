@@ -1,4 +1,6 @@
 import 'package:course_app_flutter/components/toolbar.dart';
+import 'package:course_app_flutter/config/app_routes.dart';
+import 'package:course_app_flutter/config/app_strings.dart';
 import 'package:course_app_flutter/styles/app_text.dart';
 import 'package:flutter/material.dart';
 
@@ -14,12 +16,12 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: Toolbar(
-        title: 'Profile',
+        title: AppStrings.profile,
         actions: [
           PopupMenuButton<ProfileMenu>(onSelected: (value) {
             switch (value) {
               case ProfileMenu.edit:
-                Navigator.of(context).pushNamed('/edit_profile');
+                Navigator.of(context).pushNamed(AppRoutes.editProfile);
                 break;
               case ProfileMenu.logout:
                 print('logout');
@@ -35,7 +37,7 @@ class ProfilePage extends StatelessWidget {
                   children: const [
                     Icon(Icons.edit),
                     SizedBox(width: 8),
-                    Text('Edit'),
+                    Text(AppStrings.edit),
                   ],
                 ),
               ),
@@ -45,7 +47,7 @@ class ProfilePage extends StatelessWidget {
                   children: const [
                     Icon(Icons.logout),
                     SizedBox(width: 8),
-                    Text('Logout'),
+                    Text(AppStrings.logout),
                   ],
                 ),
               ),
@@ -78,21 +80,21 @@ class ProfilePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Column(
-                children: [
+                children: const [
                   Text('470', style: AppText.header2),
-                  Text('Followers'),
+                  Text(AppStrings.followers),
                 ],
               ),
               Column(
-                children: [
+                children: const [
                   Text('100', style: AppText.header2),
-                  Text('Posts'),
+                  Text(AppStrings.posts),
                 ],
               ),
               Column(
-                children: [
+                children: const [
                   Text('900', style: AppText.header2),
-                  Text('Following'),
+                  Text(AppStrings.following),
                 ],
               ),
             ],

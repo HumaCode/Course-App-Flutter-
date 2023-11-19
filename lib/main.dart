@@ -1,7 +1,4 @@
-import 'package:course_app_flutter/pages/edit_profile_page.dart';
-import 'package:course_app_flutter/pages/home_page.dart';
-import 'package:course_app_flutter/pages/login_page.dart';
-import 'package:course_app_flutter/pages/main_page.dart';
+import 'package:course_app_flutter/config/app_routes.dart';
 import 'package:course_app_flutter/styles/app_color.dart';
 import 'package:flutter/material.dart';
 
@@ -21,13 +18,8 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: AppColors.background,
         brightness: Brightness.dark,
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const LoginPage(),
-        '/home': (context) => HomePage(),
-        '/main': (context) => const MainPage(),
-        '/edit_profile': (context) => const EditProfilePage(),
-      },
+      initialRoute: AppRoutes.login,
+      routes: AppRoutes.pages,
     );
   }
 }

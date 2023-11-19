@@ -1,6 +1,8 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:course_app_flutter/components/post_item.dart';
 import 'package:course_app_flutter/components/toolbar.dart';
-import 'package:course_app_flutter/styles/app_color.dart';
+import 'package:course_app_flutter/config/app_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -18,7 +20,7 @@ class HomePage extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: SvgPicture.asset('assets/svg/ic_location.svg'),
+            icon: SvgPicture.asset(AppIcons.icLocation),
           ),
         ],
       ),
