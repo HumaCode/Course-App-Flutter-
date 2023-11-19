@@ -1,4 +1,5 @@
 import 'package:course_app_flutter/components/toolbar.dart';
+import 'package:course_app_flutter/components/user_avatar.dart';
 import 'package:course_app_flutter/config/app_routes.dart';
 import 'package:course_app_flutter/config/app_strings.dart';
 import 'package:course_app_flutter/styles/app_text.dart';
@@ -57,13 +58,8 @@ class ProfilePage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          ClipRRect(
-            borderRadius: const BorderRadius.all(Radius.circular(16)),
-            child: Image.asset(
-              'assets/temp/user1.png',
-              width: 90,
-              height: 90,
-            ),
+          const UserAvatar(
+            size: 90,
           ),
           const SizedBox(height: 24),
           const Text(
