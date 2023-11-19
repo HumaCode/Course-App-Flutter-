@@ -1,3 +1,4 @@
+import 'package:course_app_flutter/components/toolbar.dart';
 import 'package:course_app_flutter/styles/app_text.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +8,15 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: Toolbar(
+        title: 'Profile',
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.more_vert_outlined),
+          ),
+        ],
+      ),
       body: Column(
         children: [
           Image.asset(
