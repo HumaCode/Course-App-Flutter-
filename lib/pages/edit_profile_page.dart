@@ -70,35 +70,74 @@ class _EditProfilePageState extends State<EditProfilePage> {
               const SizedBox(height: 16),
               const AppTextField(hint: AppStrings.birthday),
               const SizedBox(height: 16),
-              RadioListTile(
-                title: const Text(AppStrings.male),
-                value: Gender.male,
-                groupValue: gender,
-                onChanged: (value) {
-                  setState(() {
-                    gender = Gender.male;
-                  });
-                },
-              ),
-              RadioListTile(
-                title: const Text(AppStrings.female),
-                value: Gender.female,
-                groupValue: gender,
-                onChanged: (value) {
-                  setState(() {
-                    gender = Gender.female;
-                  });
-                },
-              ),
-              RadioListTile(
-                title: const Text(AppStrings.other),
-                value: Gender.other,
-                groupValue: gender,
-                onChanged: (value) {
-                  setState(() {
-                    gender = Gender.other;
-                  });
-                },
+              Container(
+                decoration: BoxDecoration(
+                  color: AppColors.fieldColor,
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(AppStrings.gender),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: RadioListTile(
+                            title: const Text(AppStrings.male),
+                            value: Gender.male,
+                            contentPadding: EdgeInsets.zero,
+                            visualDensity: const VisualDensity(
+                              horizontal: VisualDensity.minimumDensity,
+                              vertical: VisualDensity.minimumDensity,
+                            ),
+                            groupValue: gender,
+                            onChanged: (value) {
+                              setState(() {
+                                gender = Gender.male;
+                              });
+                            },
+                          ),
+                        ),
+                        Expanded(
+                          child: RadioListTile(
+                            title: const Text(AppStrings.female),
+                            value: Gender.female,
+                            contentPadding: EdgeInsets.zero,
+                            visualDensity: const VisualDensity(
+                              horizontal: VisualDensity.minimumDensity,
+                              vertical: VisualDensity.minimumDensity,
+                            ),
+                            groupValue: gender,
+                            onChanged: (value) {
+                              setState(() {
+                                gender = Gender.female;
+                              });
+                            },
+                          ),
+                        ),
+                        Expanded(
+                          child: RadioListTile(
+                            title: const Text(AppStrings.other),
+                            value: Gender.other,
+                            contentPadding: EdgeInsets.zero,
+                            visualDensity: const VisualDensity(
+                              horizontal: VisualDensity.minimumDensity,
+                              vertical: VisualDensity.minimumDensity,
+                            ),
+                            groupValue: gender,
+                            onChanged: (value) {
+                              setState(() {
+                                gender = Gender.other;
+                              });
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
