@@ -5,6 +5,7 @@ import 'package:course_app_flutter/components/toolbar.dart';
 import 'package:course_app_flutter/components/user_avatar.dart';
 import 'package:course_app_flutter/config/app_strings.dart';
 import 'package:course_app_flutter/styles/app_color.dart';
+import 'package:course_app_flutter/styles/app_text.dart';
 import 'package:flutter/material.dart';
 
 enum Gender {
@@ -71,6 +72,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
               const AppTextField(hint: AppStrings.birthday),
               const SizedBox(height: 16),
               Container(
+                padding: const EdgeInsets.only(left: 12, right: 12, top: 6),
                 decoration: BoxDecoration(
                   color: AppColors.fieldColor,
                   borderRadius: const BorderRadius.all(
@@ -80,7 +82,12 @@ class _EditProfilePageState extends State<EditProfilePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(AppStrings.gender),
+                    Text(
+                      AppStrings.gender,
+                      style: AppText.body1.copyWith(
+                        fontSize: 12,
+                      ),
+                    ),
                     Row(
                       children: [
                         Expanded(
