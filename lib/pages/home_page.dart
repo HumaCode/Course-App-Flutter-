@@ -3,6 +3,7 @@
 import 'package:course_app_flutter/components/post_item.dart';
 import 'package:course_app_flutter/components/toolbar.dart';
 import 'package:course_app_flutter/config/app_icon.dart';
+import 'package:course_app_flutter/config/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -19,7 +20,9 @@ class HomePage extends StatelessWidget {
         title: 'Title App',
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed(AppRoutes.nearby);
+            },
             icon: SvgPicture.asset(AppIcons.icLocation),
           ),
         ],
